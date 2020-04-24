@@ -4,27 +4,27 @@ import { createStructuredSelector } from "reselect";
 
 import { selectEducation } from "../../redux/education/education.selectors";
 
-import "./education.styles.scss";
+import { EducationContainer, TitleContainer } from "./education.styles.jsx";
 
 const Education = ({ education }) => (
-  <div className="education-container">
+  <EducationContainer>
     {education.map((edu) => (
-      <div className="edu-container" key={edu.id}>
-        <div className="education-header"></div>
+      <TitleContainer key={edu.id}>
+        <div className="title-header"></div>
         <span>{edu.years}</span>
         <span>
           {edu.title}, {edu.school}
         </span>
-        <div className="education-content">
+        <div className="title-content">
           <ul>
             {edu.bullets.map((bullet) => (
               <li key={bullet}>{bullet}</li>
             ))}
           </ul>
         </div>
-      </div>
+      </TitleContainer>
     ))}
-  </div>
+  </EducationContainer>
 );
 
 const mapStateToProps = createStructuredSelector({

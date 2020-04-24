@@ -1,29 +1,37 @@
 import React from "react";
 
-import "./lights.styles.scss";
+import {
+  BottomLeftFlashLight,
+  LowerFlashLightPart,
+  BottomRightFlashLight,
+  TopLeftFlashLight,
+  TopRightFlashLight,
+  UpperFlashLightPart,
+  Light,
+} from "./lights.styles.jsx";
 
 const Lights = () => (
   <div>
-    <div className="flashlight-top-right">
-      <div className="upper" />
-      <div className="lower" />
-      <div className="light" />
-    </div>
-    <div className="flashlight-top-left">
-      <div className="upper" />
-      <div className="lower" />
-      <div className="light" />
-    </div>
-    <div className="flashlight-bottom-right">
-      <div className="upper" />
-      <div className="lower" />
-      <div className="light" />
-    </div>
-    <div className="flashlight-bottom-left">
-      <div className="upper" />
-      <div className="lower" />
-      <div className="light" />
-    </div>
+    <TopLeftFlashLight>
+      <UpperFlashLightPart />
+      <LowerFlashLightPart />
+      <Light />
+    </TopLeftFlashLight>
+    <TopRightFlashLight>
+      <UpperFlashLightPart />
+      <LowerFlashLightPart />
+      <Light />
+    </TopRightFlashLight>
+    <BottomLeftFlashLight>
+      <UpperFlashLightPart />
+      <LowerFlashLightPart />
+      <Light />
+    </BottomLeftFlashLight>
+    <BottomRightFlashLight>
+      <UpperFlashLightPart />
+      <LowerFlashLightPart />
+      <Light />
+    </BottomRightFlashLight>
   </div>
 );
 

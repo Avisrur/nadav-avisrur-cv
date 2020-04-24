@@ -4,14 +4,14 @@ import { createStructuredSelector } from "reselect";
 
 import { selectSkills } from "../../redux/profile/profile.selectors";
 
-import "./skills.styles.scss";
+import { SkillsContainer, SkillsSpan } from "./skills.styles.jsx";
 
 const Skills = ({ skills }) => (
-  <div className="skills-container">
+  <SkillsContainer>
     {skills.map((skill) => (
-      <span key={skill.id}>{skill.skill} </span>
+      <SkillsSpan key={skill.id}>{skill.skill} </SkillsSpan>
     ))}
-  </div>
+  </SkillsContainer>
 );
 
 const mapStateToProps = createStructuredSelector({

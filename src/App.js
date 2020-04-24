@@ -1,9 +1,7 @@
 import React from "react";
-import "./App.css";
-import CvLightsOn from "./components/cv-lights-on/cv-lights-on.component";
+import "./App.scss";
+import Cv from "./components/cv/cv.component";
 
-const App = () => {
-  return <div>{true ? <CvLightsOn /> : null}</div>;
-};
+const App = () => <Cv />;
 
 export default App;

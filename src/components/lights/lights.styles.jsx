@@ -1,45 +1,53 @@
-@mixin flashlight($deg, $top, $right, $bottom, $left) {
+import styled, { css } from "styled-components";
+
+const flashlight = css`
   width: 100px;
   height: 100px;
   position: fixed;
   margin: auto;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
-  transform: rotate($deg);
-}
+`;
 
-.flashlight-top-right {
-  @include flashlight(-135deg, 0, 0, null, null);
-}
-.flashlight-top-left {
-  @include flashlight(135deg, 0, null, null, 0);
-}
+export const TopRightFlashLight = styled.div`
+  ${flashlight};
+  top: 0;
+  right: 0;
+  transform: rotate(-135deg);
+`;
 
-.flashlight-bottom-right {
-  @include flashlight(-45deg, null, 0, 0, null);
-}
+export const TopLeftFlashLight = styled.div`
+  ${flashlight};
+  top: 0;
+  left: 0;
+  transform: rotate(135deg);
+`;
+export const BottomRightFlashLight = styled.div`
+  ${flashlight};
+  bottom: 0;
+  right: 0;
+  transform: rotate(-45deg);
+`;
+export const BottomLeftFlashLight = styled.div`
+  ${flashlight};
+  bottom: 0;
+  left: 0;
+  transform: rotate(45deg);
+`;
 
-.flashlight-bottom-left {
-  @include flashlight(45deg, null, null, 0, 0);
-}
-
-.upper {
+export const UpperFlashLightPart = styled.div`
   background-color: #8c8c8c;
   height: 20px;
   width: 100px;
-}
+`;
 
-.lower {
+export const LowerFlashLightPart = styled.div`
   height: 0px;
   width: 40px;
   border-top: 80px solid #595959;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
-}
+`;
 
-.light {
+export const Light = styled.div`
   height: 0px;
   width: 100px;
   border-top: 80px solid rgba(255, 255, 51, 0.9);
@@ -49,4 +57,4 @@
   bottom: 100px;
   left: -100px;
   /* visibility: hidden; */
-}
+`;

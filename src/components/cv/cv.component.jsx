@@ -6,18 +6,22 @@ import Skills from "../skills/skills.component";
 import Experience from "../experience/experience.component";
 import Education from "../education/education.component";
 import Lights from "../lights/lights.component";
+import LightButton from "../light-button/light-button.component";
 
-import "./cv-lights-off.styles.scss";
+import { CvContainer } from "./cv.styles.jsx";
 
-const CvLightsOff = () => (
-  <div className="container">
-    <Lights />
-    <Header />
-    <Summary />
-    <Skills />
-    <Experience />
-    <Education />
+const Cv = () => (
+  <div>
+    <LightButton />
+    <CvContainer>
+      <Lights />
+      <Header />
+      <Summary />
+      <Skills />
+      <Experience />
+      <Education />
+    </CvContainer>
   </div>
 );
 
-export default CvLightsOff;
+export default Cv;

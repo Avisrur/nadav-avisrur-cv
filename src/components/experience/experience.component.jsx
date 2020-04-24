@@ -2,13 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import "./experience.styles.scss";
 import { selectExperience } from "../../redux/experience/experience.selectors";
 
-const Experience = ({ experience }) => (
-  <div className="experience-container">
+import { ExperienceContainer, JobContainer } from "./experience.styles.jsx";
+
+const Experience = ({ experience, hiddenOrVisible }) => (
+  <ExperienceContainer>
     {experience.map((job) => (
-      <div className="job-container" key={job.id}>
+      <JobContainer hiddenOrVisible={hiddenOrVisible} key={job.id}>
         <div className="job-header">
           <span>{job.years}</span>
           <span>
@@ -23,9 +24,9 @@ const Experience = ({ experience }) => (
             ))}
           </ul>
         </div>
-      </div>
+      </JobContainer>
     ))}
-  </div>
+  </ExperienceContainer>
 );
 
 const mapStateToProps = createStructuredSelector({
