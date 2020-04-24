@@ -5,17 +5,21 @@ import { createStructuredSelector } from "reselect";
 import { selectSkills } from "../../redux/profile/profile.selectors";
 
 import { SkillsContainer, SkillsSpan } from "./skills.styles.jsx";
+import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 
-const Skills = ({ skills }) => (
-  <SkillsContainer>
+const Skills = ({ skills, hiddenOrVisible }) => (
+  <SkillsContainer hiddenOrVisible={hiddenOrVisible}>
     {skills.map((skill) => (
-      <SkillsSpan key={skill.id}>{skill.skill} </SkillsSpan>
+      <SkillsSpan hiddenOrVisible={hiddenOrVisible} key={skill.id}>
+        {skill.skill}{" "}
+      </SkillsSpan>
     ))}
   </SkillsContainer>
 );
 
 const mapStateToProps = createStructuredSelector({
   skills: selectSkills,
+  hiddenOrVisible: selectHiddenOrVisible,
 });
 
 export default connect(mapStateToProps)(Skills);

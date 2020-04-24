@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import {
   BottomLeftFlashLight,
@@ -9,30 +11,35 @@ import {
   UpperFlashLightPart,
   Light,
 } from "./lights.styles.jsx";
+import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors.js";
 
-const Lights = () => (
+const Lights = ({ hiddenOrVisible }) => (
   <div>
     <TopLeftFlashLight>
       <UpperFlashLightPart />
       <LowerFlashLightPart />
-      <Light />
+      <Light hiddenOrVisible={hiddenOrVisible} />
     </TopLeftFlashLight>
     <TopRightFlashLight>
       <UpperFlashLightPart />
       <LowerFlashLightPart />
-      <Light />
+      <Light hiddenOrVisible={hiddenOrVisible} />
     </TopRightFlashLight>
     <BottomLeftFlashLight>
       <UpperFlashLightPart />
       <LowerFlashLightPart />
-      <Light />
+      <Light hiddenOrVisible={hiddenOrVisible} />
     </BottomLeftFlashLight>
     <BottomRightFlashLight>
       <UpperFlashLightPart />
       <LowerFlashLightPart />
-      <Light />
+      <Light hiddenOrVisible={hiddenOrVisible} />
     </BottomRightFlashLight>
   </div>
 );
 
-export default Lights;
+const mapStateToProps = createStructuredSelector({
+  hiddenOrVisible: selectHiddenOrVisible,
+});
+
+export default connect(mapStateToProps)(Lights);

@@ -1,6 +1,6 @@
 import LightsActionTypes from "./lights.types";
 
-export const fetchCollectionsSuccess = (visibleOrHidden) => ({
+export const setLights = (visibleOrHidden) => ({
   type: LightsActionTypes.SET_LIGHTS,
   payload: visibleOrHidden,
 });

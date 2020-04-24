@@ -3,7 +3,7 @@ const INITIAL_STATE = {
   hiddenOrVisible: "hidden",
 };
 
-const profileReducer = (state = INITIAL_STATE, action) => {
+const lightsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case LightsActionTypes.SET_LIGHTS:
       return {
@@ -15,4 +15,4 @@ const profileReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default profileReducer;
+export default lightsReducer;

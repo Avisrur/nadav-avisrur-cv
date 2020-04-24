@@ -5,11 +5,12 @@ import { createStructuredSelector } from "reselect";
 import { selectEducation } from "../../redux/education/education.selectors";
 
 import { EducationContainer, TitleContainer } from "./education.styles.jsx";
+import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 
-const Education = ({ education }) => (
-  <EducationContainer>
+const Education = ({ education, hiddenOrVisible }) => (
+  <EducationContainer hiddenOrVisible={hiddenOrVisible}>
     {education.map((edu) => (
-      <TitleContainer key={edu.id}>
+      <TitleContainer hiddenOrVisible={hiddenOrVisible} key={edu.id}>
         <div className="title-header"></div>
         <span>{edu.years}</span>
         <span>
@@ -29,6 +30,7 @@ const Education = ({ education }) => (
 
 const mapStateToProps = createStructuredSelector({
   education: selectEducation,
+  hiddenOrVisible: selectHiddenOrVisible,
 });
 
 export default connect(mapStateToProps)(Education);

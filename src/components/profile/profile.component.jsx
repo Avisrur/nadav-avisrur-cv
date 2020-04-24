@@ -11,14 +11,15 @@ import {
   NameContainer,
   TitlesContainer,
 } from "./profile.styles.jsx";
+import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 
 const profileImage = require("../../assets/profile.png");
 
-const Header = ({ profile }) => {
+const Profile = ({ profile, hiddenOrVisible }) => {
   console.log(profile);
   return (
-    <ProfileHeader>
-      <DetailsContainer>
+    <ProfileHeader hiddenOrVisible={hiddenOrVisible}>
+      <DetailsContainer hiddenOrVisible={hiddenOrVisible}>
         <img src={profileImage} alt="Nadav" />
         <TitlesContainer>
           <NameContainer>{profile.fullName}</NameContainer>
@@ -38,5 +39,6 @@ const Header = ({ profile }) => {
 
 const mapStateToProps = createStructuredSelector({
   profile: selectProfile,
+  hiddenOrVisible: selectHiddenOrVisible,
 });
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps)(Profile);

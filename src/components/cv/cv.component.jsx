@@ -1,6 +1,6 @@
 import React from "react";
 
-import Header from "../profile/profile.component";
+import Profile from "../profile/profile.component";
 import Summary from "../summary/summary.component";
 import Skills from "../skills/skills.component";
 import Experience from "../experience/experience.component";
@@ -15,7 +15,7 @@ const Cv = () => (
     <LightButton />
     <CvContainer>
       <Lights />
-      <Header />
+      <Profile />
       <Summary />
       <Skills />
       <Experience />

@@ -50,11 +50,11 @@ export const LowerFlashLightPart = styled.div`
 export const Light = styled.div`
   height: 0px;
   width: 100px;
-  border-top: 80px solid rgba(255, 255, 51, 0.9);
+  border-top: 80px solid rgba(247, 239, 141, 0.9);
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
   position: fixed;
   bottom: 100px;
   left: -100px;
-  /* visibility: hidden; */
+  visibility: ${({ hiddenOrVisible }) => hiddenOrVisible};
 `;
