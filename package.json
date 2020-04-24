@@ -2,17 +2,18 @@
   "name": "nadav-avisrur-cv",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://avisrur.github.io/nadav-avisrur-cv",
   "dependencies": {
     "@material-ui/core": "^4.9.11",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
-    "react-tabs": "^3.1.0",
     "redux": "^4.0.5",
     "reselect": "^4.0.0",
     "social-media-icons-react": "^1.0.10",
@@ -22,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run-script build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
