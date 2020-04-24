@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/nadav-avisrur-cv/static/css/main.ee76c508.chunk.css",
+    "main.js": "/nadav-avisrur-cv/static/js/main.e7805fe0.chunk.js",
+    "main.js.map": "/nadav-avisrur-cv/static/js/main.e7805fe0.chunk.js.map",
+    "runtime-main.js": "/nadav-avisrur-cv/static/js/runtime-main.edbca3c3.js",
+    "runtime-main.js.map": "/nadav-avisrur-cv/static/js/runtime-main.edbca3c3.js.map",
+    "static/js/2.b13e2519.chunk.js": "/nadav-avisrur-cv/static/js/2.b13e2519.chunk.js",
+    "static/js/2.b13e2519.chunk.js.map": "/nadav-avisrur-cv/static/js/2.b13e2519.chunk.js.map",
+    "index.html": "/nadav-avisrur-cv/index.html",
+    "precache-manifest.01614a19abb7e011285262a76b7f8126.js": "/nadav-avisrur-cv/precache-manifest.01614a19abb7e011285262a76b7f8126.js",
+    "service-worker.js": "/nadav-avisrur-cv/service-worker.js",
+    "static/css/main.ee76c508.chunk.css.map": "/nadav-avisrur-cv/static/css/main.ee76c508.chunk.css.map",
+    "static/js/2.b13e2519.chunk.js.LICENSE.txt": "/nadav-avisrur-cv/static/js/2.b13e2519.chunk.js.LICENSE.txt",
+    "static/media/background.png": "/nadav-avisrur-cv/static/media/background.b097ec34.png",
+    "static/media/profile.png": "/nadav-avisrur-cv/static/media/profile.49a80a4e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.edbca3c3.js",
+    "static/js/2.b13e2519.chunk.js",
+    "static/css/main.ee76c508.chunk.css",
+    "static/js/main.e7805fe0.chunk.js"
+  ]
+}
