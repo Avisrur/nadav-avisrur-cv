@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/nadav-avisrur-cv/precache-manifest.01614a19abb7e011285262a76b7f8126.js"
+  "/nadav-avisrur-cv/precache-manifest.219b593bb4f5d61725c5a5e39bfa05bd.js"
 );
 
 self.addEventListener('message', (event) => {
