@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import background from "../../assets/background.png";
 
 export const SkillsContainer = styled.div`
   color: white;
@@ -8,7 +7,7 @@ export const SkillsContainer = styled.div`
   border-bottom: 0px;
   width: 50%;
   text-align: center;
-  background-image: url(${background});
+  background: blueviolet;
   padding: 10px;
   box-shadow: ${({ hiddenOrVisible }) =>
     hiddenOrVisible === "hidden"

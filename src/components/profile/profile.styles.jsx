@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import background from "../../assets/background.png";
 
 export const ProfileHeader = styled.div`
   color: white;
@@ -12,7 +11,7 @@ export const ProfileHeader = styled.div`
   border-radius: 15px 15px 0px 0px;
   border: 1px solid grey;
   border-bottom: 0px;
-  background-image: url(${background});
+  background: blueviolet;
   box-shadow: ${({ hiddenOrVisible }) =>
     hiddenOrVisible === "hidden"
       ? null

@@ -12,8 +12,6 @@ import {
 } from "./profile.styles.jsx";
 import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 
-// const profileImage = require("../../assets/profile.png");
-
 const Profile = ({ profile, hiddenOrVisible }) => {
   console.log(profile);
   return (
