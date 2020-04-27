@@ -8,7 +8,10 @@ export const EducationContainer = styled.div`
   text-align: center;
   background: blueviolet;
   padding: 10px;
-  box-shadow: 0px 5px 5px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: ${({ hiddenOrVisible }) =>
+    hiddenOrVisible === "hidden"
+      ? null
+      : `0px 5px 5px 10px rgba(0, 0, 0, 0.6)`};
 `;
 
 export const TitleContainer = styled.div`
