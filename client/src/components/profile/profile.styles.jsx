@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProfileHeader = styled.div`
   color: white;
-  width: 30%;
+  width: 20%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -12,6 +12,7 @@ export const ProfileHeader = styled.div`
   border: 1px solid grey;
   border-bottom: 0px;
   background: blueviolet;
+  padding-bottom: 10px;
   box-shadow: ${({ hiddenOrVisible }) =>
     hiddenOrVisible === "hidden"
       ? null
@@ -21,9 +22,10 @@ export const ProfileHeader = styled.div`
 
 export const DetailsContainer = styled.div`
   visibility: ${({ hiddenOrVisible }) => hiddenOrVisible};
+  text-align: center;
   img {
     border-radius: 50%;
-    max-width: 100%;
+    max-width: 70%;
   }
 `;
 export const TitlesContainer = styled.div`

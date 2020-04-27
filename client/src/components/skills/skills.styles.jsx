@@ -5,7 +5,7 @@ export const SkillsContainer = styled.div`
   border-radius: 15px;
   border: 1px solid grey;
   border-bottom: 0px;
-  width: 50%;
+  width: 80%;
   text-align: center;
   background: blueviolet;
   padding: 10px;

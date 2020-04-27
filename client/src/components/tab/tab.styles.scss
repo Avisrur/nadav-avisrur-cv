@@ -1,0 +1,29 @@
+.tab-button {
+  font-family: "Comic Neue";
+  background-color: inherit;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tab-button-active {
+  font-family: "Comic Neue";
+  background-color: inherit;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  background-color: red;
+}
+
+.tab-button:hover {
+  background-color: #ddd;
+}

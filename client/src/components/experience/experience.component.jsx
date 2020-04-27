@@ -4,30 +4,34 @@ import { createStructuredSelector } from "reselect";
 
 import { selectExperience } from "../../redux/experience/experience.selectors";
 
-import { ExperienceContainer, JobContainer } from "./experience.styles.jsx";
+import {
+  ExperienceContainer,
+  JobContainer,
+  TabButton,
+  TabContainer,
+} from "./experience.styles.jsx";
 import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 
 const Experience = ({ experience, hiddenOrVisible }) => (
-  <ExperienceContainer hiddenOrVisible={hiddenOrVisible}>
-    {experience.map((job) => (
-      <JobContainer hiddenOrVisible={hiddenOrVisible} key={job.id}>
-        <div className="job-header">
-          <span>{job.years}</span>
-          <span>
-            {job.title},{job.companyName}
-          </span>
-          <span>{job.city}</span>
-        </div>
-        <div className="job-content">
-          <ul>
-            {job.bullets.map((bullet) => (
-              <li key={bullet}>{bullet}</li>
-            ))}
-          </ul>
-        </div>
-      </JobContainer>
-    ))}
-  </ExperienceContainer>
+  <ExperienceContainer hiddenOrVisible={hiddenOrVisible}></ExperienceContainer>
+  // {experience.map((job) => (
+  //   <JobContainer hiddenOrVisible={hiddenOrVisible} key={job.id}>
+  //     <div className="job-header">
+  //       <span>{job.years}</span>
+  //       <span>
+  //         {job.title},{job.companyName}
+  //       </span>
+  //       <span>{job.city}</span>
+  //     </div>
+  //     <div className="job-content">
+  //       <ul>
+  //         {job.bullets.map((bullet) => (
+  //           <li key={bullet}>{bullet}</li>
+  //         ))}
+  //       </ul>
+  //     </div>
+  //   </JobContainer>
+  // ))}
 );
 
 const mapStateToProps = createStructuredSelector({
