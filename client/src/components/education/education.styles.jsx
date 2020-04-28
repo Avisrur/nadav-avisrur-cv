@@ -6,7 +6,7 @@ export const EducationContainer = styled.div`
   border: 1px solid grey;
   width: 50%;
   text-align: center;
-  background: blueviolet;
+  background: #686868;
   padding: 10px;
   box-shadow: ${({ hiddenOrVisible }) =>
     hiddenOrVisible === "hidden"

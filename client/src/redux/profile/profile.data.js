@@ -1,3 +1,18 @@
+import {
+  faDatabase,
+  faCubes,
+  faDharmachakra,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faReact,
+  faAws,
+  faAngular,
+  faJava,
+  faDocker,
+  faNode,
+  faJenkins,
+} from "@fortawesome/free-brands-svg-icons";
+
 const PROFILE_DATA = {
   fullName: "Nadav Avisrur",
   firstName: "Nadav",
@@ -22,42 +37,52 @@ const PROFILE_DATA = {
   skills: [
     {
       id: 1,
+      icon: faJava,
       skill: "Java",
     },
     {
       id: 2,
+      icon: faReact,
       skill: "ReactJS",
     },
     {
       id: 3,
+      icon: faAngular,
       skill: "Angular2",
     },
     {
       id: 4,
+      icon: faNode,
       skill: "NodeJS",
     },
     {
       id: 5,
+      icon: faAws,
       skill: "AWS",
     },
     {
       id: 6,
+      icon: faDocker,
       skill: "Docker",
     },
     {
       id: 7,
+      icon: faDharmachakra,
       skill: "Kubernetes",
     },
     {
       id: 8,
+      icon: faDatabase,
       skill: "MongoDB",
     },
     {
       id: 9,
-      skill: "Firebase",
+      icon: faJenkins,
+      skill: "Jenkins",
     },
     {
       id: 10,
+      icon: faCubes,
       skill: "Microservices",
     },
   ],

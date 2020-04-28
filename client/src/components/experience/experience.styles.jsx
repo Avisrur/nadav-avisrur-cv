@@ -7,7 +7,7 @@ export const ExperienceContainer = styled.div`
   border-bottom: 0px;
   width: 50%;
   text-align: center;
-  background: blueviolet;
+  background: #686868;
   background-size: cover;
   padding: 10px;
   box-shadow: ${({ hiddenOrVisible }) =>

@@ -3,9 +3,7 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import {
-  BottomLeftFlashLight,
   LowerFlashLightPart,
-  BottomRightFlashLight,
   TopLeftFlashLight,
   TopRightFlashLight,
   UpperFlashLightPart,

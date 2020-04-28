@@ -1,6 +1,6 @@
 import LightsActionTypes from "./lights.types";
 const INITIAL_STATE = {
-  hiddenOrVisible: "visible",
+  hiddenOrVisible: "hidden",
 };
 
 const lightsReducer = (state = INITIAL_STATE, action) => {

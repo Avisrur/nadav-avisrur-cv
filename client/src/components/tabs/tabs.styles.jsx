@@ -1,21 +1,12 @@
-import styled, { keyframes } from "styled-components";
-
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-`;
+import styled from "styled-components";
 
 export const TabContainer = styled.div`
+  padding: 0px;
   border-radius: 15px;
   width: 82%;
-  overflow: hidden;
+  height: 38vh;
   border: 1px solid grey;
-  background: blueviolet;
+  background: #686868;
   box-shadow: ${({ hiddenOrVisible }) =>
     hiddenOrVisible === "hidden"
       ? null
@@ -23,7 +14,16 @@ export const TabContainer = styled.div`
 `;
 
 export const TabsList = styled.div`
-  display: flex;
+  display: inline-flex;
+  flex-direction: column;
+  height: 100%;
   justify-content: space-evenly;
+`;
+
+export const TabContent = styled.div`
+  display: inline-flex;
+`;
+
+export const TabsVisibility = styled.div`
   visibility: ${({ hiddenOrVisible }) => hiddenOrVisible};
 `;

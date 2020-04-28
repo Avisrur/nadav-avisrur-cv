@@ -4,12 +4,7 @@ import { createStructuredSelector } from "reselect";
 
 import { selectExperience } from "../../redux/experience/experience.selectors";
 
-import {
-  ExperienceContainer,
-  JobContainer,
-  TabButton,
-  TabContainer,
-} from "./experience.styles.jsx";
+import { ExperienceContainer } from "./experience.styles.jsx";
 import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 
 const Experience = ({ experience, hiddenOrVisible }) => (

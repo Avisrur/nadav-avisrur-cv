@@ -11,7 +11,7 @@ export const ProfileHeader = styled.div`
   border-radius: 15px 15px 0px 0px;
   border: 1px solid grey;
   border-bottom: 0px;
-  background: blueviolet;
+  background: #686868;
   padding-bottom: 10px;
   box-shadow: ${({ hiddenOrVisible }) =>
     hiddenOrVisible === "hidden"

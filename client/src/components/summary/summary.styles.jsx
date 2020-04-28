@@ -7,7 +7,7 @@ export const SummeryContainer = styled.div`
   border-bottom: 0px;
   width: 80%;
   text-align: center;
-  background: blueviolet;
+  background: #686868;
   padding: 10px;
   z-index: -1;
   box-shadow: ${({ hiddenOrVisible }) =>
