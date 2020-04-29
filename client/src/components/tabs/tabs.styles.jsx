@@ -14,16 +14,19 @@ export const TabContainer = styled.div`
 `;
 
 export const TabsList = styled.div`
-  display: inline-flex;
-  flex-direction: column;
-  height: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
+  visibility: ${({ hiddenOrVisible }) => hiddenOrVisible};
+`;
+
+export const ButtonContainer = styled.div`
+  visibility: ${({ hiddenOrVisible }) => hiddenOrVisible};
 `;
 
 export const TabContent = styled.div`
-  display: inline-flex;
+  height: 80%;
+  text-align: center;
 `;
 
-export const TabsVisibility = styled.div`
-  visibility: ${({ hiddenOrVisible }) => hiddenOrVisible};
-`;
+export const TabsVisibility = styled.div``;

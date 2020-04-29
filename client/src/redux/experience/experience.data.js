@@ -2,8 +2,8 @@ const EXPERIENCE_DATA = [
   {
     id: 1,
     years: "2018-2019",
-    title: "Backend Engineer",
-    companyName: "HEED LLC. Startup by AGT",
+    title: "Backend Developer",
+    companyName: "HEED LLC.",
     city: "Herzliya",
     bullets: [
       "Key member in developing an automated highlights sport platform based on IOT data and statistics for creating a new sport consumer experience",

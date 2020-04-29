@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 import { selectActiveTabs } from "../../redux/tabs/tabs.selectors";
 
+import Experience from "../experience/experience.component";
+import Education from "../education/education.component";
+import Military from "../military/military.component";
+
 import {
   TabContainer,
   TabsList,
   TabContent,
-  TabsVisibility,
+  ButtonContainer,
 } from "./tabs.styles";
 import "./tab.styles.scss";
 import { setActiveTab } from "../../redux/tabs/tabs.actions";
 
 const Tabs = ({ hiddenOrVisible, activeTabs, setActiveTab }) => {
+  const [activeTab, setTab] = useState("Experience");
   function handleActiveTab(label) {
     setActiveTab([
       {
@@ -30,24 +35,32 @@ const Tabs = ({ hiddenOrVisible, activeTabs, setActiveTab }) => {
         className: label === "Military" ? "tab-button-active" : "tab-button",
       },
     ]);
+    setTab(label);
   }
 
   return (
     <TabContainer hiddenOrVisible={hiddenOrVisible}>
-      <TabsVisibility hiddenOrVisible={hiddenOrVisible}>
-        <TabsList hiddenOrVisible={hiddenOrVisible}>
-          {activeTabs.map((tab) => (
-            <button
-              key={tab.label}
-              className={tab.className}
-              onClick={() => handleActiveTab(tab.label)}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </TabsList>
-        <TabContent>bklakladkldsasldk</TabContent>
-      </TabsVisibility>
+      <TabsList>
+        {activeTabs.map((tab) => (
+          <ButtonContainer
+            hiddenOrVisible={hiddenOrVisible}
+            key={tab.label}
+            className={tab.className}
+            onClick={() => handleActiveTab(tab.label)}
+          >
+            {tab.label}
+          </ButtonContainer>
+        ))}
+      </TabsList>
+      <TabContent>
+        {
+          {
+            Experience: <Experience />,
+            Education: <Education />,
+            Military: <Military />,
+          }[activeTab]
+        }
+      </TabContent>
     </TabContainer>
   );
 };
