@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const EducationContainer = styled.div`
   color: white;
-  border-radius: 15px;
   border: 1px solid grey;
-  width: 50%;
-  text-align: center;
-  background: blueviolet;
+  /* width: 50%; */
+  overflow: scroll;
+  height: 100%;
+  background: #686868;
   padding: 10px;
   box-shadow: ${({ hiddenOrVisible }) =>
     hiddenOrVisible === "hidden"
@@ -16,4 +16,13 @@ export const EducationContainer = styled.div`
 
 export const TitleContainer = styled.div`
   visibility: ${({ hiddenOrVisible }) => hiddenOrVisible};
+`;
+
+export const TitleHeader = styled.div`
+  text-align: center;
+  font-size: 23px;
+`;
+
+export const BulletContainer = styled.li`
+  text-align: left;
 `;

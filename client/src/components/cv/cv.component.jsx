@@ -3,10 +3,9 @@ import React from "react";
 import Profile from "../profile/profile.component";
 import Summary from "../summary/summary.component";
 import Skills from "../skills/skills.component";
-import Experience from "../experience/experience.component";
-import Education from "../education/education.component";
 import Lights from "../lights/lights.component";
 import LightButton from "../light-button/light-button.component";
+import Tabs from "../tabs/tabs.component";
 
 import { CvContainer } from "./cv.styles.jsx";
 
@@ -18,8 +17,7 @@ const Cv = () => (
       <Profile />
       <Summary />
       <Skills />
-      <Experience />
-      <Education />
+      <Tabs />
     </CvContainer>
   </div>
 );

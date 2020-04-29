@@ -6,6 +6,7 @@ const EDUCATION_DATA = [
     title: "React Developer",
     bullets: [
       "Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL) Course.",
+      "The Complete Node.js Developer Course (3rd Edition)",
     ],
   },
   {

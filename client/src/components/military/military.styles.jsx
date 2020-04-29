@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ExperienceContainer = styled.div`
+export const MilitaryContainer = styled.div`
   color: white;
   border: 1px solid grey;
   background: #686868;

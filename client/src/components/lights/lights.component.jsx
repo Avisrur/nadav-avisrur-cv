@@ -3,9 +3,7 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import {
-  BottomLeftFlashLight,
   LowerFlashLightPart,
-  BottomRightFlashLight,
   TopLeftFlashLight,
   TopRightFlashLight,
   UpperFlashLightPart,
@@ -25,16 +23,6 @@ const Lights = ({ hiddenOrVisible }) => (
       <LowerFlashLightPart />
       <Light hiddenOrVisible={hiddenOrVisible} />
     </TopRightFlashLight>
-    <BottomLeftFlashLight>
-      <UpperFlashLightPart />
-      <LowerFlashLightPart />
-      <Light hiddenOrVisible={hiddenOrVisible} />
-    </BottomLeftFlashLight>
-    <BottomRightFlashLight>
-      <UpperFlashLightPart />
-      <LowerFlashLightPart />
-      <Light hiddenOrVisible={hiddenOrVisible} />
-    </BottomRightFlashLight>
   </div>
 );
 

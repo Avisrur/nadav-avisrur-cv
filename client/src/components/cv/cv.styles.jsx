@@ -6,5 +6,5 @@ export const CvContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 50px 30px;
+  margin: 20px 30px;
 `;
