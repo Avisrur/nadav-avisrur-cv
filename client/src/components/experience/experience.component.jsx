@@ -5,24 +5,24 @@ import { createStructuredSelector } from "reselect";
 import { selectExperience } from "../../redux/experience/experience.selectors";
 
 import {
-  ExperienceContainer,
-  JobContainer,
+  TabContentContainer,
+  TitleContainer,
+  TitleHeader,
   BulletContainer,
-  JobHeader,
-} from "./experience.styles.jsx";
+} from "../../styles/general.styles.jsx";
 import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 
 const Experience = ({ experience, hiddenOrVisible }) => (
-  <ExperienceContainer hiddenOrVisible={hiddenOrVisible}>
+  <TabContentContainer hiddenOrVisible={hiddenOrVisible}>
     {experience.map((job) => (
-      <JobContainer hiddenOrVisible={hiddenOrVisible} key={job.id}>
-        <JobHeader>
+      <TitleContainer hiddenOrVisible={hiddenOrVisible} key={job.id}>
+        <TitleHeader>
           <span>{job.years} </span>
           <span>
             {job.title}, {job.companyName}
           </span>
           <span> {job.city}</span>
-        </JobHeader>
+        </TitleHeader>
         <div className="job-content">
           <ul>
             {job.bullets.map((bullet) => (
@@ -30,9 +30,9 @@ const Experience = ({ experience, hiddenOrVisible }) => (
             ))}
           </ul>
         </div>
-      </JobContainer>
+      </TitleContainer>
     ))}
-  </ExperienceContainer>
+  </TabContentContainer>
 );
 
 const mapStateToProps = createStructuredSelector({

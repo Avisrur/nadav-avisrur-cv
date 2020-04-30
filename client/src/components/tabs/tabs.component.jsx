@@ -41,25 +41,27 @@ const Tabs = ({ hiddenOrVisible, activeTabs, setActiveTab }) => {
   return (
     <TabContainer hiddenOrVisible={hiddenOrVisible}>
       <TabsList>
-        {activeTabs.map((tab) => (
-          <ButtonContainer
-            hiddenOrVisible={hiddenOrVisible}
-            key={tab.label}
-            className={tab.className}
-            onClick={() => handleActiveTab(tab.label)}
-          >
-            {tab.label}
-          </ButtonContainer>
-        ))}
+        {activeTabs.map((tab) =>
+          hiddenOrVisible === "visible" ? (
+            <ButtonContainer
+              key={tab.label}
+              className={tab.className}
+              onClick={() => handleActiveTab(tab.label)}
+              duration={Math.random() * 5 + "s"}
+            >
+              {tab.label}
+            </ButtonContainer>
+          ) : null
+        )}
       </TabsList>
       <TabContent>
-        {
-          {
-            Experience: <Experience />,
-            Education: <Education />,
-            Military: <Military />,
-          }[activeTab]
-        }
+        {hiddenOrVisible === "visible"
+          ? {
+              Experience: <Experience />,
+              Education: <Education />,
+              Military: <Military />,
+            }[activeTab]
+          : null}
       </TabContent>
     </TabContainer>
   );

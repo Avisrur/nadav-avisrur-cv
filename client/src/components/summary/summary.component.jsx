@@ -4,12 +4,19 @@ import { createStructuredSelector } from "reselect";
 
 import { selectSummary } from "../../redux/profile/profile.selectors";
 
-import { SummeryContainer, SummaryContent } from "./summary.styles.jsx";
+import {
+  SummeryContainer,
+  SummaryContent,
+  SummarySpan,
+} from "./summary.styles.jsx";
 import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 
 const Summary = ({ summary, hiddenOrVisible }) => (
   <SummeryContainer hiddenOrVisible={hiddenOrVisible}>
-    <SummaryContent hiddenOrVisible={hiddenOrVisible}>{summary}</SummaryContent>
+    {hiddenOrVisible === "visible" ? <SummarySpan>Summary</SummarySpan> : null}
+    {hiddenOrVisible === "visible" ? (
+      <SummaryContent>{summary}</SummaryContent>
+    ) : null}
   </SummeryContainer>
 );
 

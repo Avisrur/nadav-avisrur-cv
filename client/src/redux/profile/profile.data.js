@@ -11,6 +11,9 @@ import {
   faDocker,
   faNode,
   faJenkins,
+  faLinkedin,
+  faLinux,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 const PROFILE_DATA = {
@@ -22,16 +25,16 @@ const PROFILE_DATA = {
   email: "nadavavisrur@gmail.com",
   summary:
     "I am an experienced software engineer with a passion for coding, solving problems and always looking for new challenges. I consider myself a highly motivated team player who learns fast and is driven by success. While I  was studying in a night school program and was able to be involved in 3 IOT based innovative projects and I believe that I made a considerable contribution to their success at the time.",
-  social: [
+  socials: [
     {
       id: 1,
-      icon: "linkedin",
-      url: "",
+      icon: faLinkedin,
+      url: "https://www.linkedin.com/in/nadav-avisrur/",
     },
     {
       id: 2,
-      icon: "github",
-      url: "",
+      icon: faGithub,
+      url: "https://github.com/Avisrur/",
     },
   ],
   skills: [
@@ -77,11 +80,16 @@ const PROFILE_DATA = {
     },
     {
       id: 9,
+      icon: faLinux,
+      skill: "Linux",
+    },
+    {
+      id: 10,
       icon: faJenkins,
       skill: "Jenkins",
     },
     {
-      id: 10,
+      id: 11,
       icon: faCubes,
       skill: "Microservices",
     },

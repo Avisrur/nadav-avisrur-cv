@@ -5,19 +5,21 @@ import { createStructuredSelector } from "reselect";
 import { selectEducation } from "../../redux/education/education.selectors";
 
 import {
-  EducationContainer,
+  TabContentContainer,
   TitleContainer,
   TitleHeader,
   BulletContainer,
-} from "./education.styles.jsx";
+} from "../../styles/general.styles.jsx";
+
+import "../../styles/general.styles";
 import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 
 const Education = ({ education, hiddenOrVisible }) => (
-  <EducationContainer hiddenOrVisible={hiddenOrVisible}>
+  <TabContentContainer hiddenOrVisible={hiddenOrVisible} className="scrollable">
     {education.map((edu) => (
       <TitleContainer hiddenOrVisible={hiddenOrVisible} key={edu.id}>
         <TitleHeader>
-          <span>{edu.years}</span>
+          <span>{edu.years} </span>
           <span>
             {edu.title}, {edu.school}
           </span>
@@ -31,7 +33,7 @@ const Education = ({ education, hiddenOrVisible }) => (
         </div>
       </TitleContainer>
     ))}
-  </EducationContainer>
+  </TabContentContainer>
 );
 
 const mapStateToProps = createStructuredSelector({

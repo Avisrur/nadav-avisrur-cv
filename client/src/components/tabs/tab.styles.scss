@@ -8,6 +8,9 @@
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
+  width: 90%;
+  text-align: center;
+  border-radius: 15px;
 }
 .tab-button-active {
   font-family: "Comic Neue";
@@ -20,8 +23,12 @@
   padding: 14px 16px;
   font-size: 17px;
   background-color: #383838;
+  width: 90%;
+  text-align: center;
+  border-radius: 15px;
 }
 
 .tab-button:hover {
+  border-radius: 15px;
   background-color: #ddd;
 }

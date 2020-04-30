@@ -3,7 +3,7 @@ const EDUCATION_DATA = [
     id: 1,
     years: "2020",
     school: "Udemy",
-    title: "React Developer",
+    title: "Full Stack Developer",
     bullets: [
       "Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL) Course.",
       "The Complete Node.js Developer Course (3rd Edition)",

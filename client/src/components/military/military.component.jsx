@@ -5,22 +5,22 @@ import { createStructuredSelector } from "reselect";
 import { selectMilitary } from "../../redux/military/military.selectors";
 
 import {
-  MilitaryContainer,
-  JobContainer,
-  JobHeader,
+  TabContentContainer,
+  TitleContainer,
+  TitleHeader,
   BulletContainer,
-} from "./military.styles.jsx";
+} from "../../styles/general.styles.jsx";
 import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 
 const Military = ({ military, hiddenOrVisible }) => (
-  <MilitaryContainer hiddenOrVisible={hiddenOrVisible}>
-    <JobContainer hiddenOrVisible={hiddenOrVisible}>
-      <JobHeader>
+  <TabContentContainer hiddenOrVisible={hiddenOrVisible}>
+    <TitleContainer hiddenOrVisible={hiddenOrVisible}>
+      <TitleHeader>
         <span>{military.years} </span>
         <span>
           {military.title}, {military.unit}
         </span>
-      </JobHeader>
+      </TitleHeader>
       <div className="job-content">
         <ul>
           {military.bullets.map((bullet) => (
@@ -28,8 +28,8 @@ const Military = ({ military, hiddenOrVisible }) => (
           ))}
         </ul>
       </div>
-    </JobContainer>
-  </MilitaryContainer>
+    </TitleContainer>
+  </TabContentContainer>
 );
 
 const mapStateToProps = createStructuredSelector({
