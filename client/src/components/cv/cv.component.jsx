@@ -1,4 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+
+import { selectHiddenOrVisible } from "../../redux/lights/lights.selectors";
 
 import Profile from "../profile/profile.component";
 import Summary from "../summary/summary.component";
@@ -7,11 +11,14 @@ import Lights from "../lights/lights.component";
 import LightButton from "../light-button/light-button.component";
 import Tabs from "../tabs/tabs.component";
 
-import { CvContainer } from "./cv.styles.jsx";
+import { CvContainer, TextContainer } from "./cv.styles.jsx";
 
-const Cv = () => (
+const Cv = ({ hiddenOrVisible }) => (
   <div>
     <LightButton />
+    <TextContainer hiddenOrVisible={hiddenOrVisible}>
+      Turn On The Light
+    </TextContainer>
     <CvContainer>
       <Lights />
       <Profile />
@@ -22,4 +29,8 @@ const Cv = () => (
   </div>
 );
 
-export default Cv;
+const mapStateToProps = createStructuredSelector({
+  hiddenOrVisible: selectHiddenOrVisible,
+});
+
+export default connect(mapStateToProps)(Cv);
