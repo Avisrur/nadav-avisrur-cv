@@ -20,5 +20,5 @@ export const TextContainer = styled.span`
   left: 200px;
   font-size: 30px;
   font-weight: 900;
-  animation: ${glow} 1s ease-in-out infinite alternate;
+  animation: ${glow} 2s linear infinite alternate;
 `;
