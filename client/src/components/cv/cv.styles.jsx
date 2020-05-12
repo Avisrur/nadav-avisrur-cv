@@ -22,6 +22,17 @@ export const TextContainer = styled.span`
   font-weight: 900;
   animation: ${glow} 2s linear infinite alternate;
   @media (max-width: 768px) {
-    visibility: hidden;
+    /* visibility: hidden; */
+    width: 80px;
+    left: 10px;
+    top: 60px;
+    font-size: 3vh;
+  }
+  @media (max-width: 400px) {
+    /* visibility: hidden; */
+    width: 70px;
+    left: 10px;
+    top: 80px;
+    font-size: 3vh;
   }
 `;
