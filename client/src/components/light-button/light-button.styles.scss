@@ -7,6 +7,10 @@
     transform: rotate(90deg);
     left: -40px;
   }
+  @media (max-width: 400px) {
+    transform: rotate(90deg);
+    left: -58px;
+  }
 }
 
 /////////////////////////////////////////////////

@@ -1,10 +1,19 @@
 import styled, { css } from "styled-components";
+import { lightOnEffect, lightOffEffect } from "../../styles/animations";
 
 const flashlight = css`
   width: 100px;
   height: 100px;
   position: fixed;
   margin: auto;
+`;
+
+const lightOn = css`
+  animation: ${lightOnEffect} 3s linear forwards;
+`;
+
+const lightOff = css`
+  animation: ${lightOffEffect} 1s linear forwards;
 `;
 
 export const TopRightFlashLight = styled.div`
@@ -61,7 +70,12 @@ export const Light = styled.div`
   position: fixed;
   bottom: 100px;
   left: -100px;
-  visibility: ${({ hiddenOrVisible }) => hiddenOrVisible};
+  ${({ hiddenOrVisible }) => {
+    if (hiddenOrVisible === "visible") return lightOn;
+    return lightOff;
+  }};
+  visibility: ${({ hiddenOrVisible }) =>
+    hiddenOrVisible === "start" ? "hidden" : "visible"};
   @media (max-width: 768px) {
     height: 0px;
     width: 30px;

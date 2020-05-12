@@ -17,7 +17,7 @@ export const ProfileHeader = styled.div`
   background: #686868;
   padding-bottom: 10px;
   box-shadow: ${({ hiddenOrVisible }) =>
-    hiddenOrVisible === "hidden"
+    hiddenOrVisible === "hidden" || hiddenOrVisible === "start"
       ? null
       : `0px -5px 5px 20px rgba(0, 0, 0, 0.5)`};
   /* z-index: -1; */

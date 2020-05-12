@@ -9,7 +9,7 @@ export const TabContainer = styled.div`
   border: 1px solid grey;
   background: #686868;
   box-shadow: ${({ hiddenOrVisible }) =>
-    hiddenOrVisible === "hidden"
+    hiddenOrVisible === "hidden" || hiddenOrVisible === "start"
       ? null
       : `0px 5px 5px 10px rgba(0, 0, 0, 0.6)`};
   z-index: 3;

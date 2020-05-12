@@ -67,3 +67,36 @@ export const bounce = keyframes`
     opacity: 1;
     transform: scale(1) translate3d(0,0,0);
   }`;
+
+export const lightOnEffect = keyframes`
+  0%{
+    opacity: 0.05;
+  }
+  10%{
+    opacity: 0.1;
+  }
+  40%{
+    opacity: 0.3
+  }
+  75%{
+    opacity: 0.6;
+  }
+  100%{
+    opacity: 0.9;
+    
+  }`;
+
+export const lightOffEffect = keyframes`
+  0%{
+    opacity: 0.9;
+  }
+  25%{
+    opacity: 0.6;
+  }
+  75%{
+    opacity: 0.3;
+  }
+  100%{
+    opacity: 0;
+    
+  }`;

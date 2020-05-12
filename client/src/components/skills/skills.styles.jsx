@@ -14,7 +14,7 @@ export const SkillsContainer = styled.div`
   background: #686868;
   padding: 10px;
   box-shadow: ${({ hiddenOrVisible }) =>
-    hiddenOrVisible === "hidden"
+    hiddenOrVisible === "hidden" || hiddenOrVisible === "start"
       ? null
       : `0px 5px 5px 10px rgba(0, 0, 0, 0.6)`};
   z-index: 2;
@@ -29,7 +29,7 @@ export const SkillsContentContainer = styled.div`
   visibility: ${({ hiddenOrVisible }) => hiddenOrVisible};
   display: contents;
   @media (max-width: 768px) {
-    width: 300px;
+    width: 100%;
     display: flex;
   }
 `;

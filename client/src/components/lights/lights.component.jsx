@@ -16,12 +16,20 @@ const Lights = ({ hiddenOrVisible }) => (
     <TopLeftFlashLight>
       <UpperFlashLightPart />
       <LowerFlashLightPart />
-      <Light hiddenOrVisible={hiddenOrVisible} />
+      {hiddenOrVisible === "visible" ? (
+        <Light hiddenOrVisible={hiddenOrVisible} />
+      ) : (
+        <Light hiddenOrVisible={hiddenOrVisible} />
+      )}
     </TopLeftFlashLight>
     <TopRightFlashLight>
       <UpperFlashLightPart />
       <LowerFlashLightPart />
-      <Light hiddenOrVisible={hiddenOrVisible} />
+      {hiddenOrVisible === "visible" ? (
+        <Light hiddenOrVisible={hiddenOrVisible} />
+      ) : (
+        <Light hiddenOrVisible={hiddenOrVisible} />
+      )}
     </TopRightFlashLight>
   </div>
 );

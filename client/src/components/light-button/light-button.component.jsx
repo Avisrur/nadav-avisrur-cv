@@ -9,7 +9,9 @@ import "./light-button.styles.scss";
 
 const LightButton = ({ hiddenOrVisible, setLights }) => {
   const handleChangeChk = () => {
-    hiddenOrVisible === "hidden" ? setLights("visible") : setLights("hidden");
+    hiddenOrVisible === "hidden" || hiddenOrVisible === "start"
+      ? setLights("visible")
+      : setLights("hidden");
   };
 
   return (
